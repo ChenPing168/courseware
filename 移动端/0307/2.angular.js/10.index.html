@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="hd">
+			<p ng-controller="hdctrl">{{name}}</p>
+		</div>
+		<div id="baidu">
+			<p ng-controller="bdctrl">{{name}}</p>
+		</div>
+		<script type="text/javascript">
+			//定义hd模块
+			angular.module('hd',[]).controller('hdctrl',function($scope){
+				$scope.name = '后盾网';
+			})
+			//定义baidu模块
+			angular.module('baidu',[]).controller('bdctrl',function($scope){
+				$scope.name = '百度网';
+			})
+			//手动两个模块（参数1：要定义模块的元素的原生对象，参数2：上面定义的模块的名称）
+			angular.bootstrap(document.getElementById("hd"),['hd']);
+			angular.bootstrap(document.getElementById("baidu"),['baidu']);
+		</script>
+	</body>
+
+
+
+
+
+
+
+
+
+</html>

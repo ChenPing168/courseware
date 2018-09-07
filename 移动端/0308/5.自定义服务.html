@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-app="hd"></div>
+		<script>
+			var m = angular.module('hd', []);
+			//定义服务   
+			m.service('$hdphp',function($window) {
+				//原型模式self.show=function(){}
+				this.show = function() {
+					$window.alert('houdunwang.com');
+				}
+			});
+			m.run(function($hdphp) {
+				$hdphp.show();
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div ng-app="hd">
+			<{name}>
+		</div>
+		<script>
+			var m = angular.module('hd', []);
+			m.config(['$interpolateProvider', function($interpolateProvider) {
+				$interpolateProvider.startSymbol('<{');
+				$interpolateProvider.endSymbol('}>');
+			}])
+			m.run(function($rootScope) {
+				$rootScope.name = '后盾网，圆你梦想！';
+			})
+		</script>
+
+	</body>
+
+</html>

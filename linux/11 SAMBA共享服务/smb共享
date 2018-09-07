@@ -1,0 +1,45 @@
+1.安装
+yum install -y samba
+service smb start
+
+2.创建共享目录 /share/houdunwang
+mkdir -p /share/houdunwang
+
+3.修改配置文件（把前面的;去掉）
+vi /etc/samba/smb.conf在最后一行找到[logon]
+改成下面的样子
+[houdunwang]
+comment = houdunwang zhu shi
+path = /share/houdunwang
+guest ok = yes
+writable = yes
+share modes = yes
+
+4.添加用户 useradd xiaoming
+smbpasswd -a xiaoming
+service smb restart
+
+5. 改变所有者所属组 chown -R xiaoming:xiaoming houdunwang
+
+6.连接 \\192.168.1.112(打开我的电脑在地址栏输入)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

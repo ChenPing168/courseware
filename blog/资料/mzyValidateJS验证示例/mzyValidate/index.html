@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--基于jq，先载入jq-->
+		<script src="dest/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--载入验证文件-->
+		<link rel="stylesheet" type="text/css" href="dest/mzyValidate.css" />
+		<script src="src/mzyValidate.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<!--这个css仅仅是为了展示示例美观才载入的，并不是说必须加载bootstrap文件-->
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<style type="text/css">
+			td{
+				padding: 3px 0;
+			}
+			/*错误表单的样式，可以自己定义，到时候传入mzy_validate函数*/
+			.error_input{
+				border: 1px solid #f00;
+				padding: 2px;
+				box-shadow: 0 0 3px #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<!--mzy_validate(当前form表单对象,提交地址,错误的input样式(可以不填),错误提示样式(可以不填))-->
+		<form method="post" onsubmit="return mzy_validate(this,'php/submit.php','error_input',2)" style="width: 980px;margin: 50px auto;">
+			<table border="0">
+				<tr>
+					<td>用户名:</td>
+					<td>
+						<input type="text" name="username" id="" rule="required|minlen:2" msg="用户名必填|用户名不得少于2位"/>
+					</td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td>
+						<input type="password" name="password" id="" rule="minlen:6" msg="密码不得少于6位"/>
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td>
+						<input type="text" name="email" rule="email" msg="必须是邮箱">
+					</td>
+				</tr>
+				<tr>
+					<td >喜欢的网站</td>
+					<td>
+						<select name="website" rule="required" msg="必须选择喜欢的网站">
+							<option value="">是哪个？</option>
+							<option value="1">houdunwang.com</option>
+							<option value="2">hdphp.com</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>网站</td>
+					<td>
+						<input type="text" name="web" rule="http" msg="必须是网址">
+					</td>
+				</tr>
+				<tr>
+					<td>手机</td>
+					<td>
+						<input type="text" name="mobile" rule="phone" msg="手机号码不正确">
+					</td>
+				</tr>
+				<tr>
+					<td>座机</td>
+					<td>
+						<input type="text" name="tel" rule="tel" msg="座机不正确">
+					</td>
+				</tr>
+				<tr>
+					<td>身份证</td>
+					<td>
+						<input type="text" name="identity" rule="identity" msg="身份证不正确">
+					</td>
+				</tr>
+				<tr>
+					<td>必须是中文</td>
+					<td>
+						<input type="text" name="chinaName" rule="china" msg="必须是中文">
+					</td>
+				</tr>
+				<tr>
+					<td>QQ号</td>
+					<td>
+						<input type="text" name="qq" rule="china" msg="必须是中文">
+					</td>
+				</tr>
+				<tr>
+					<td>长度不超过10位</td>
+					<td>
+						<input type="text" name="maxlen" rule="maxlen:10" msg="不超过10位">
+					</td>
+				</tr>
+				<tr>
+					<td>长度不小于5位</td>
+					<td>
+						<input type="text" name="minlen" rule="minlen:5" msg="不小于5位" >
+					</td>
+				</tr>
+				<tr>
+					<td>5~10的数</td>
+					<td>
+						<input type="text" name="num" rule="num:5,10" msg="必须是5~10的数" >
+					</td>
+				</tr>
+				<tr>
+					<td>正则验证 必须为2位数字</td>
+					<td>
+						<input type="text" name="regexp" rule="regexp:/^\d{2}$/" msg="正则验证 必须为2位数字"  >
+					</td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td>
+						<input type="text" name="password">
+					</td>
+				</tr>
+				<tr>
+					<td>确认密码</td>
+					<td>
+						<input type="text" name="cpassword" rule="confirm:password" msg="两次密码不相同">
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td>马老师姓名?(Ajax验证，答案：马震宇)</td>
+					<td>
+						<input name="mzyName" type="text" rule="ajax:php/checkUser.php" msg="姓名不对">
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="提交" class="btn btn-success"/>
+		</form>
+	</body>
+
+</html>

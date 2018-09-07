@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<!--载入公共头部-->
+	{{include file="header.html"}}
+	<!--foreach循环示例-->
+	<table border="1" cellspacing="" cellpadding="">
+		<tr>
+			<th>id</th>
+			<th>标题</th>
+			<th>操作</th>
+		</tr>
+		{{foreach from=$data key=k item=v}}
+			<tr>
+				<td>{{$v.aid}}</td>
+				<td>{{$v.t}}</td>
+				<td>
+					<a href="">编辑</a>
+					<a href="">删除</a>
+				</td>
+			</tr>
+		{{/foreach}}
+	</table>
+	<hr />
+	<!--section基本循环示例-->
+	<table border="1" cellspacing="" cellpadding="">
+		<tr>
+			<th>id</th>
+			<th>标题</th>
+			<th>操作</th>
+		</tr>
+		<!--
+		loop要循环谁
+		name调取数据时的下标
+		start开始位置
+		max截取多少条
+		step跳步
+		-->
+		{{section loop=$data name=n start=1 max=6 step=2}}
+			<tr>
+				<td>{{$data[n].aid}}</td>
+				<td>{{$data[n].t}}</td>
+				<td>
+					<a href="">编辑</a>
+					<a href="">删除</a>
+				</td>
+			</tr>
+		{{/section}}
+	</table>
+	
+	<hr />
+	<!--section第一条变红示例-->
+	<table border="1" cellspacing="" cellpadding="">
+		<tr>
+			<th>id</th>
+			<th>标题</th>
+			<th>操作</th>
+		</tr>
+		{{section loop=$data name=n}}
+			<!--如果是第一条数据-->
+			{{if $smarty.section.n.first}}
+				<!--字体颜色变红-->
+				<tr style="color: red;">
+					<td>{{$data[n].aid}}</td>
+					<td>{{$data[n].t}}</td>
+					<td>
+						<a href="">编辑</a>
+						<a href="">删除</a>
+					</td>
+				</tr>
+			{{else}}
+				<!--其余不变-->
+				<tr>
+					<td>{{$data[n].aid}}</td>
+					<td>{{$data[n].t}}</td>
+					<td>
+						<a href="">编辑</a>
+						<a href="">删除</a>
+					</td>
+				</tr>
+			{{/if}}
+		{{/section}}
+	</table>
+	
+	<hr />
+	<!--section前3条变红示例-->
+	<table border="1" cellspacing="" cellpadding="">
+		<tr>
+			<th>id</th>
+			<th>标题</th>
+			<th>操作</th>
+		</tr>
+		{{section loop=$data name=n}}
+			<!--如果是前三条数据-->
+			{{if $smarty.section.n.index < 3}}
+				<!--字体颜色变红-->
+				<tr style="color: red;">
+					<td>{{$data[n].aid}}</td>
+					<td>{{$data[n].t}}</td>
+					<td>
+						<a href="">编辑</a>
+						<a href="">删除</a>
+					</td>
+				</tr>
+			{{else}}
+				<!--其余不变-->
+				<tr>
+					<td>{{$data[n].aid}}</td>
+					<td>{{$data[n].t}}</td>
+					<td>
+						<a href="">编辑</a>
+						<a href="">删除</a>
+					</td>
+				</tr>
+			{{/if}}
+		{{/section}}
+	</table>
+	<hr />
+	<!--自定义变量调节器jiequ-->
+	{{$chinese|jiequ:3}}
+	
+	<!--载入js-->
+	{{js file="./template/index.js"}}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

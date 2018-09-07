@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="userinfo" ng-app="userinfo" ng-controller="user">
+			<input type="text" name="username" id="" ng-model="name"/>
+			<span>{{name}}</span>
+			<p ng-bind="name"></p>
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('userinfo',[]);
+			m.controller('user',function(){
+				alert(1);
+			})
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

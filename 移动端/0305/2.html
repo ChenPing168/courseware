@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				height: 5000px;
+			}
+			#box{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			box.addEventListener('touchstart',function(e){
+				alert(e.changedTouches[0].pageY);
+			},false);
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

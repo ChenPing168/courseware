@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<style type="text/css" media="screen">
+		.box{
+			width: 500px;
+			margin:20px auto;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="box">
+	<form method="post" action="">
+  <div class="form-group">
+    <label for="exampleInputEmail1">昵称</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="昵称" name="nickname" value="<?php echo $oldData['nickname'] ?>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">留言内容</label>
+   <textarea name="content" class="form-control"  id="" cols="30" rows="10"><?php echo $oldData['content'] ?></textarea>
+  </div>
+ 
+ 
+  <button type="submit" class="btn btn-success">修改留言</button>
+  <a href="index.php" class="btn btn-info">返回</a>
+</form>
+
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div ng-app="hd">
+			<hdcms>北京后盾网</hdcms>
+		</div>
+		<script>
+			var m = angular.module('hd', []);
+			m.directive('hdcms', [function() {
+				return {
+					restrict: 'E',
+					transclude: true,
+					replace: true,
+					//把hdcms包裹的内容放入带有ng-transclude中
+					template: "<h1><p style='color:red' ng-transclude></p></h1>"
+				};
+			}])
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,62 @@
+[ 2015-12-28T08:56:59+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Tag/index.php
+[ 2015-12-28T08:57:17+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:37:54+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:42:41+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:43:16+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:47:17+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:47:51+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:52:14+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T09:53:32+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:28:01+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:28:37+08:00 ]NOTICE: Undefined offset: 0/www/c58_teacher/blog/blog/App/Common/Model/Arc.php (23).
+[ 2015-12-28T10:28:37+08:00 ]EXCEPTION: INSERT INTO article (`title`,`author`,`category_cid`,`digest`,`sendtime`,`user_uid`,`thumb`)VALUES(?,?,?,?,?,?,?) ;BindParams:array (
+  0 => '123123',
+  1 => '',
+  2 => '',
+  3 => '',
+  4 => 1451269717,
+  5 => '1',
+  6 => NULL,
+)23000;1048;Column 'thumb' cannot be null
+[ 2015-12-28T10:31:08+08:00 ]EXCEPTION: INSERT INTO article (`title`,`author`,`category_cid`,`digest`,`sendtime`,`user_uid`,`thumb`)VALUES(?,?,?,?,?,?,?) ;BindParams:array (
+  0 => '123',
+  1 => '',
+  2 => '',
+  3 => '',
+  4 => 1451269868,
+  5 => '1',
+  6 => NULL,
+)23000;1048;Column 'thumb' cannot be null
+[ 2015-12-28T10:32:38+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:32:55+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:33:44+08:00 ]NOTICE: Undefined offset: 0/www/c58_teacher/blog/blog/App/Common/Model/Arc.php (25).
+[ 2015-12-28T10:33:44+08:00 ]EXCEPTION: INSERT INTO article (`title`,`author`,`category_cid`,`digest`,`sendtime`,`user_uid`,`thumb`)VALUES(?,?,?,?,?,?,?) ;BindParams:array (
+  0 => '5555',
+  1 => '',
+  2 => '',
+  3 => '',
+  4 => 1451270024,
+  5 => '1',
+  6 => NULL,
+)23000;1048;Column 'thumb' cannot be null
+[ 2015-12-28T10:36:18+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:37:57+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:38:06+08:00 ]NOTICE: Undefined offset: 0/www/c58_teacher/blog/blog/App/Common/Model/Arc.php (25).
+[ 2015-12-28T10:39:32+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:39:40+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:51:42+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T10:53:08+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:15:27+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:15:59+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:17:53+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:22:16+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:23:37+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:30:19+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:31:43+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:33:20+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/App/Common/Model/Arc.php (75).
+[ 2015-12-28T11:33:22+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:39:03+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:39:45+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:39:58+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:40:49+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php
+[ 2015-12-28T11:41:44+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Arc/index.php

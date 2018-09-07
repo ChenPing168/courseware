@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="hd">
+		<div ng-controller="arc">
+			{{name}}
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('hd',[]);
+			m.controller('arc',function($http,$scope){
+				$http.get('get.php').success(function(phpdata){
+					console.log(phpdata);
+				});
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

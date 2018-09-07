@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+				background: black;
+			}
+			span{
+				border: 1px solid grey;
+				padding: 5px;
+				margin-right: 5px;
+			}
+		</style>
+		<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="300"></canvas>
+		<br />
+		<span id="red">红</span><span id="blue">蓝</span><span>橡皮擦</span><span>一键擦黑板</span>
+		<span id="save">保存图片</span>
+		<img src=""/>
+		<script type="text/javascript">
+			var blackBoard = function(){
+				//赋值给一个变量，为了将来到处可以用this
+				var hdThis = this;
+				//原生对象
+				hdThis.hdEle = document.getElementById("canvas");
+				//画布对象
+				hdThis.hdCtx = this.hdEle.getContext('2d');
+				//设置线条颜色
+				hdThis.hdLineColor = 'red';
+				//设置线条的宽度
+				hdThis.hdLineWidth = 5;
+				//运行方法
+				hdThis.hdRun = function(){
+					hdThis.hdCtx.font = '20px Arial';
+					hdThis.hdCtx.fillStyle = 'white';
+					hdThis.hdCtx.fillText('黑板',0,20);
+					//当鼠标按下的时候
+					$(hdThis.hdEle).mousedown(function(e){
+						//初始化路径
+						hdThis.hdCtx.beginPath();
+						//设置线条颜色
+						hdThis.hdCtx.strokeStyle = hdThis.hdLineColor;
+						//设置线条宽度
+						hdThis.hdCtx.lineWidth = hdThis.hdLineWidth;
+						//设置起点
+						hdThis.hdCtx.moveTo(e.clientX - $(this).position().left,e.clientY - $(this).position().top);
+						//移动鼠标
+						$(this).mousemove(function(e){
+							hdThis.hdCtx.lineTo(e.clientX - $(this).position().left,e.clientY - $(this).position().top);
+							hdThis.hdCtx.stroke();
+						})
+					})
+					//鼠标抬起
+					$(document).mouseup(function(){
+						//解绑鼠标移动
+						$(hdThis.hdEle).unbind('mousemove');
+					})
+					
+				}
+			}
+			
+			var obj = new blackBoard();
+			obj.hdRun();
+			
+			$('#blue,#red').click(function(){
+				obj.hdLineColor = $(this).attr('id');
+			})
+			$('#save').click(function(){
+				var data = $('#canvas')[0].toDataURL('image/jpeg');
+				$('img').attr('src',data);
+			})
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

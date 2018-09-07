@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-app>
+			<!--novalidate阻止浏览器用html5的验证方式-->
+			<form action="" method="post" name="logForm" novalidate>
+				<!--必须写ng-model-->
+				用户名：
+				<input type="email" name="username" ng-model="username" id="" required/>
+				<!--如果没有修改过或者没有通过规则，那么显示错误-->
+				<span style="color: red;" ng-show="logForm.username.$pristine || logForm.username.$invalid">
+					<span ng-show="logForm.username.$error.required">用户名必填</span>
+					<span ng-show="logForm.username.$error.email">用户名必须为邮箱</span>
+				</span>
+				<br /> 密码：
+				<input type="password" name="password" ng-model="password" required ng-minlength="6" />
+				<span style="color: red;" ng-show="logForm.password.$pristine || logForm.password.$invalid">
+					<span ng-show="logForm.password.$error.required">密码必填</span>
+					<span ng-show="logForm.password.$error.minlength">密码不得少于6位</span>
+				</span>
+				<br />
+				<input type="submit" value="登陆" ng-disabled="logForm.username.$pristine || logForm.username.$invalid || logForm.password.$pristine || logForm.password.$invalid" />
+			</form>
+		</div>
+
+	</body>
+
+</html>

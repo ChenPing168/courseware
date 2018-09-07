@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				perspective: 800px;
+				perspective-origin: 50% 0%;
+			}
+			#box{
+				width: 500px;
+				height: 300px;
+				/*background: red;*/
+				margin: 50px auto;
+				position: relative;
+				animation: hd 20s infinite linear;
+				transform-style: preserve-3d;
+			}
+			@-webkit-keyframes hd{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+				}
+			}
+			#box p{
+				width: 150px;
+				height: 150px;
+				color: white;
+				line-height: 150px;
+				text-align: center;
+				position: absolute;
+				left: 175px;
+				top: 75px;
+			}
+			#zheng{
+				transform:translateZ(75px);
+				background: darkblue;
+			}
+			#dui{
+				background: darkcyan;
+				transform:translateZ(-75px);
+			}
+			#xia{
+				background: darkgoldenrod;
+				transform-origin: bottom;
+				transform: translateZ(75px) rotateX(90deg);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p id="zheng">正面</p>
+			<p id="dui">对面</p>
+			<!--<p>左面</p>
+			<p>右面</p>
+			<p>上面</p>-->
+			<p id="xia">下面</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

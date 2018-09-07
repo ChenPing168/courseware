@@ -1,0 +1,17 @@
+[ 2015-12-30T10:57:18+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Tag/index.php
+[ 2015-12-30T11:16:58+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:17:06+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:30:43+08:00 ]EXCEPTION: SELECT  *  FROM article_tag INNER JOIN tag ON tag_tid = tid WHERE airticle_aid=6 ;BindParams:array (
+)42S22;1054;Unknown column 'airticle_aid' in 'where clause'
+[ 2015-12-30T11:35:05+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:35:14+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:35:18+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:35:22+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-30T11:37:20+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:52:09+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:52:58+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T11:53:12+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/index.php
+[ 2015-12-30T12:04:50+08:00 ]NOTICE: Undefined variable: total/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (76).
+[ 2015-12-30T12:08:30+08:00 ]NOTICE: Undefined variable: total/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (30).
+[ 2015-12-30T12:08:55+08:00 ]NOTICE: Undefined variable: total/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (30).
+[ 2015-12-30T12:09:12+08:00 ]NOTICE: Undefined variable: total/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (31).

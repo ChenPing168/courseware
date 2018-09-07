@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			#welcome .hdw{
+				margin-top: 3rem;
+		        animation: hdw 2s infinite;
+		    }
+		    .hdw a{
+		    		color: white;
+		    }
+		    @-webkit-keyframes hdw{
+		    	0%{opacity: 0;}
+		    	50%{opacity: 1;}
+		    	100%{opacity: 0;}
+		    }
+		</style>
+	</head>
+	<body>
+		<!--欢迎界面遮罩-->
+		<div id="welcome">
+			<h1>看你有多色</h1>
+			<p>找出颜色不同的一个</p>
+			<div class="btnwrap">
+				<button id="start" onclick="start()">开始游戏</button>
+			</div>
+			<p class="hdw"><a href="http://www.houdunwang.com">后盾IT教育</a></p>
+		</div>
+		<!--结束界面遮罩-->
+		<div id="over">
+			<h1 id="userLevel">L1你是瞎子！</h1>
+			<div class="buttonwrap">
+				<button onclick="start()">
+					点击重玩
+				</button>
+			</div>
+			
+		</div>
+		<!--遮罩下面的内容-->
+		<div id="content">
+			<!--分数和时间-->
+			<div id="scorewrap">得分：<span id="score">0</span></div>
+			<p id="time"></p>
+			<!--放方块的盒子-->
+			<div id="box">
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			// @author:马震宇 houdunwangmzy@163.com
+			var color = function(){
+				//原生对象
+				this.hdEle = document.getElementById("box");
+				//浏览器宽度高度
+				this.innerW = window.innerWidth;
+				this.innerH = window.innerHeight;
+				//容器宽高
+				this.hdEleW = this.innerW;
+				this.hdEleH = this.innerW;
+				//有色方块的数组
+				this.hdRectArr = [];
+				//默认等级1
+				this.level = 1;
+				//最高等级
+				this.maxLevel = 8;
+				//默认间隔
+				this.jiange = 10;
+				//正确的index
+				this.rightIndex;
+				//用户分数
+				this.score = 0;
+				//初始时间
+				this.time = 20;
+				
+				var hdThis = this;
+				//执行程序
+				this.hdRun = function(){
+					//开始游戏
+					this.hdStart();
+					//填充有色方块
+					this.hdCreateRect();
+					
+				}
+				this.hdCheck = function(){
+					//获得所有的方块
+					var span = this.hdEle.getElementsByTagName('span');
+					for (var i=0;i<span.length;i++) {
+						//压入索引
+						span[i].index = i;
+						span[i].onclick = function(){
+							//如果点击正确
+							if(this.index == hdThis.rightIndex){
+								if(hdThis.level<hdThis.maxLevel){
+									hdThis.level++;
+								}
+								//重新创建
+								hdThis.hdCreateRect();
+								//分数加+1
+								hdThis.score++;
+								document.getElementById("score").innerHTML = hdThis.score;
+								
+							}
+						}
+						
+					}
+				}
+				
+				this.hdCreateRect = function(){
+					while(this.hdEle.hasChildNodes()){
+						this.hdEle.removeChild(this.hdEle.firstChild);
+					}
+					//获得除了边框的元素的宽度
+					var w = this.hdEle.clientWidth;
+					//间隔--
+					if(this.level<hdThis.maxLevel){
+						this.jiange--;
+					}
+				
+					//1级的间隔是1个，2级的间隔是2个....
+					//假设间隔为10，那么就是宽度 减去 间隔乘以10的宽度，就是剩下给方块的宽度
+					var leftW = w - this.level * this.jiange;
+					//算出每个方块的宽度，因为1级是2个方块，2级是3个方块
+					var everyW = leftW/(this.level + 1);
+					//随机颜色
+					var r = Math.floor(Math.random() * 256);
+					var g = Math.floor(Math.random() * 256);
+					var b = Math.floor(Math.random() * 256);
+					//循环方块，比如x轴是2个，那么总共就是2*2是4个，x轴是3个，那么总共就是3*3是9个，
+					for (var i=0;i<(this.level+1) * (this.level+1);i++) {
+						var span = document.createElement('span');
+						span.style.width = everyW + 'px';
+						span.style.height = everyW + 'px';
+						span.style.background = 'rgb('+r+','+g+','+b+')';
+						span.style.display = 'block';
+						span.style.float = 'left';
+						//如果不是第一例，有marginleft
+						if(i%(this.level+1)){
+							span.style.marginLeft = this.jiange + 'px';
+						}
+						//如果不是第一行，都有marginTop
+						if(i>=(this.level+1)){
+							span.style.marginTop = this.jiange + 'px';
+						}
+						//插入
+						this.hdEle.appendChild(span);
+					}
+					//随机抓一个span变色
+					var span = this.hdEle.getElementsByTagName('span');
+					var randIndex = Math.floor(Math.random() * span.length);
+					//颜色稍微改变一些
+					r+=15;
+					g+=15;
+					b+=15;
+					span[randIndex].style.background = 'rgb('+r+','+g+','+b+')';
+					//赋值给正确的index
+					this.rightIndex = randIndex;
+					//检测用户点击
+					this.hdCheck();
+					
+				}
+				this.hdInit = function(){
+					//设置欢迎界面的高度
+					document.getElementById("welcome").style.height = this.innerH + 'px';
+					//设置结束界面的高度
+					document.getElementById("over").style.height = this.innerH + 'px';
+					//渲染画布的高，因为中间的小方块是正方形，那么画布也是正方形
+					//元素的宽和高和浏览器的宽是一样的
+					this.hdEle.style.height = this.hdEleW + 'px';
+				}
+				//开始游戏
+				this.hdStart = function(){
+					//点击开始游戏之后欢迎界面消失
+					document.getElementById("welcome").style.display = 'none';
+					document.getElementById("over").style.display = 'none';
+					//获得显示用户等级的元素
+					var userLevel = document.getElementById("userLevel");
+					
+					//先写一下时间,以免出现空白一下
+					var timeEle = document.getElementById("time");
+					timeEle.innerHTML = this.time;
+					//定时器开始
+					var time = this.time;
+					var timer = setInterval(function(){
+						//判断如果时间到了
+						if(time == 0){
+							//判断分数
+							switch (true){
+								case hdThis.score<8:
+									userLevel.innerHTML = 'L1你是瞎子!';
+									break;
+								case hdThis.score<20:
+									userLevel.innerHTML = 'L2猫的眼神!';
+									break;
+								case hdThis.score<30:
+									userLevel.innerHTML = 'L3猎鹰的眼睛!';
+									break;
+								case hdThis.score<30:
+									userLevel.innerHTML = 'L4GOD的视力!';
+									break;
+								default:
+									userLevel.innerHTML = 'L999别玩了！太厉害了';
+									break;
+							}
+							//结束界面显示
+							document.getElementById("over").style.display = 'block';
+							clearInterval(timer);
+							return;
+						}
+						//每次--
+						time--;
+						timeEle.innerHTML = time;
+					},1000);
+				}
+			}
+			//实例化对象
+			var obj = new color;
+			obj.hdInit();
+			//点击触发开始
+			function start(){
+				//让等级恢复到1
+				obj.level = 1;
+				//分数恢复到0
+				obj.score = 0;
+				//间隔恢复到10
+				obj.jiange = 10;
+				obj.hdRun();
+			}
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="hd" ng-controller="hd">
+		<p>{{hd.name}}</p>
+		<p>{{hd.age()}}</p>
+		<script type="text/javascript">
+			angular.module('hd',[]).controller('hd',function($scope){
+				$scope.hd = {
+					name : 'leo',
+					age :function(){
+						return 18;
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ddd;
+}
+li {
+  list-style: none;
+}
+.menu li {
+  float: left;
+  margin-left: 5px;
+  padding: 10px;
+  border: 1px solid #ADD8E6;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ADD8E6;
+}
+.menu li a:hover {
+  color: yellow;
+}
+.article li {
+  border: 5px solid #ADD8E6;
+}
+/*# sourceMappingURL=index.css.map */

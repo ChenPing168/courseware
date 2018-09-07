@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 600px;
+				height: 400px;
+				position: relative;
+			}
+			#box p,#center{
+				width: 80px;
+				height: 80px;
+				background: red;
+				border-radius: 50%;
+				position: absolute;
+				left:250px;
+				top: 150px;
+				text-align: center;
+				line-height: 80px;
+				color: white;
+				font-weight: 700;
+			}
+			#center{
+				cursor: pointer;
+				transition: all 1s;
+			}
+			#center:hover{
+				transform: rotate(1080deg);
+			}
+			#box p:nth-of-type(1){
+				background: lightcoral;
+			}
+			#box p:nth-of-type(2){
+				background: lightgreen;
+			}
+			#box p:nth-of-type(3){
+				background: darkblue;
+			}
+			#box p:nth-of-type(4){
+				background: darkcyan;
+			}
+			#box p:nth-of-type(5){
+				background: darkgoldenrod;
+			}
+			#box p:nth-of-type(6){
+				background: darkmagenta;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p>马老师</p>
+			<p>实例</p>
+			<p>教学</p>
+			<p>视频</p>
+			<p>分享</p>
+			<p>框架</p>
+			<div id="center">后盾</div>
+		</div>
+		<script type="text/javascript">
+			var center = document.getElementById("center");
+			var pList = document.getElementById("box").getElementsByTagName('p');
+			//每一个p所占的弧度
+			var rad = (360 / pList.length) * Math.PI / 180;
+			var r = 150;
+			var flag = true;
+			center.onclick = function(){
+				if(flag){
+					flag = false;
+					for (var i=0;i<pList.length;i++) {
+						var x = Math.cos(rad * i) * r + 250;
+						var y = Math.sin(rad * i) * r + 150;
+						pList[i].style.left = x + 'px';
+						pList[i].style.top = y + 'px';
+						pList[i].style.transition = 'all 1s ' + 100 * i + 'ms';
+						pList[i].style.transform = 'rotateX(1080deg)';
+					}
+				}else{
+					flag = true;
+					alert(2);
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

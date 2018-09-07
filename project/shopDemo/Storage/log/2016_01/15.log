@@ -1,0 +1,34 @@
+[ 2016-01-15T08:37:28+08:00 ]EXCEPTION: Home\Controller\AdminController 不存在
+[ 2016-01-15T08:39:57+08:00 ]EXCEPTION: 模板不存在:App/Admin/View/Goods/add.php
+[ 2016-01-15T08:41:25+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:41:25+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:41:25+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:41:25+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:12+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:12+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:12+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:12+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:15+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:15+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:15+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:15+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:38+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:38+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:38+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:38+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:46+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:46+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:47:46+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:47:46+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:49:06+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:49:06+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:49:06+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:49:06+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:49:32+08:00 ]NOTICE: Undefined variable: cate/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:49:32+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (108).
+[ 2016-01-15T08:49:32+08:00 ]NOTICE: Undefined variable: brand/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:49:32+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/project/shopDemo/Storage/view/compile/b0cef37a0386a1faffd967a594ec1e7e.php (119).
+[ 2016-01-15T08:53:20+08:00 ]EXCEPTION: SELECT  *  FROM category ;BindParams:array (
+)3D000;1046;No database selected
+[ 2016-01-15T08:53:44+08:00 ]EXCEPTION: SELECT  *  FROM category ;BindParams:array (
+)42S02;1146;Table 'project.category' doesn't exist

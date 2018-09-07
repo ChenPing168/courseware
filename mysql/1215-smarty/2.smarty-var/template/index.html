@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		{{*我是注释*}}
+		首页
+		<hr />
+		{{$result.webname}}
+		<hr />
+		{{$web.web.url}}
+		<hr />
+		<!--获得get参数-->
+		{{$smarty.get.aid}}
+		<hr />
+		<!--获得常量-->		
+		{{$smarty.const.ROOT_PATH}}
+		<hr />
+		<!--当前时间,格式化时间-->
+		{{$smarty.now|date_format:'%y-%m-%d %H:%M:%S'}}
+		<hr />
+		<!--默认值-->
+		{{$d|default:'我是$d的默认值'}}
+		<hr />
+		<!--把变量转为大写然后再转成小写-->
+		{{$letter|upper|lower}}
+		<hr />
+		<!--截取英文字符串-->
+		{{$letter|truncate:6}}
+		<hr />
+		<!--截取中文字符串-->
+		{{$chinese|truncate:9}}
+		<hr />
+		<!--用literal标签包裹的代码不会解析-->
+		{{literal}}
+			手册说明：截取字符串的变量调节器是truncate
+			<br />
+			例：{{$letter|truncate:6}}
+		{{/literal}}
+		<hr />
+		<!--if写法-->
+		{{if $web.web.name=='houdun' && $web.web.url=='www.houdunwang.com'}}
+			是后盾网
+		{{else}}
+			不是后盾网
+		{{/if}}
+		
+		
+		
+	</body>
+</html>
+
+
+
+

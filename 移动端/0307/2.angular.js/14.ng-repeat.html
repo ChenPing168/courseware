@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="hd">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-controller="arc">
+			<ul>
+				<li ng-repeat="(k,v) in arc | orderBy:id">{{v.title}}</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('hd',[]);
+			m.controller('arc',function($scope){
+				$scope.arc =  [
+					{id : 1,title:'今天是周一'},
+					{id : 2,title:'明天是周二'}
+				];
+
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

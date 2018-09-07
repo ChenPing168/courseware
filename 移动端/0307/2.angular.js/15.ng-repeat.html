@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-app="hd">
+			<input type="text" ng-model="name" />
+			<ul style="background: #f7f7f7;">
+				<li ng-repeat="v in result">{{v.title}}</li>
+			</ul>
+		</div>
+		<script>
+			var m = angular.module('hd', []);
+			m.run(function($rootScope, $filter) {
+				$rootScope.$watch('name', function(newV, oldV) {
+					//如果为未定义(第一次是未定义)或者为空的时候消失
+					if (angular.isUndefined(newV) || newV == '') {
+						$rootScope.result = [];
+					} else {
+						//否则搜索
+						$rootScope.result = $filter('filter')($rootScope.data, newV);
+					}
+				})
+				$rootScope.data = [{
+					title: '后盾网成功上市了'
+				}, {
+					title: '百度2016再创辉煌'
+				}, {
+					title: '新浪被马震宇收购了'
+				}, {
+					title: '后盾网2016飞黄腾达'
+				}, ];
+			})
+		</script>
+	</body>
+
+</html>

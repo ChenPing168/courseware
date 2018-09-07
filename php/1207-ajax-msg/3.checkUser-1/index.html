@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('input[name=username]').blur(function(){
+					//获得当前表单的值
+					var name = $(this).val();
+					//异步请求
+					$.ajax({
+						//请求类型(决定用打电话方式订餐)
+						//post或者get
+						type:"post",
+						//请求地址（定哪家饭馆的饭）
+						url:"./check.php",
+						//发送数据 （告诉饭馆你吃什么）
+						data:{n : name},
+						//php返回的数据类型
+						dataType:'text',
+						//服务器响应（饭馆响应）
+						//phpData是服务器响应的数据
+						success:function(phpData){
+							$('#msg').html(phpData);
+						}
+						
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			用户名： <input type="text" name="username" id="" /><span id="msg"></span>
+			<br />
+			密码： <input type="password" name="password" id="" />
+			<br />
+			<br />
+			<input type="submit" value="注册"/>
+		</form>
+	</body>
+</html>

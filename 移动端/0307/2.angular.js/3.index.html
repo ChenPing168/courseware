@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="hd">
+		<div ng-controller="arc">
+			{{name}}
+			{{url}}
+		</div>
+		<div ng-controller="cate">
+			{{name}}
+			{{url}}
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('hd',[]);
+			m.controller('arc',function($scope){
+				$scope.name = '文章';
+			})
+			m.controller('cate',function($rootScope,$scope){
+				$scope.name = '分类';
+				$rootScope.url = 'www.houdunwang.com';
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<style>
+		div{width:100px;height:100px;background: green;}
+	</style>
+	<form action="2.php" method="post" >
+		<div id="d">插到这</div>
+		<button type="submit">上传</button>
+	</form>
+	<script>
+		var d = $("#d")[0];
+		d.ondragover=function(e){
+			e.preventDefault();
+		}
+		d.ondrop=function(e){
+			e.preventDefault();//阻止默认形式访问新窗口打开文件
+			var files  = e.dataTransfer.files;
+			var obj = new FileReader();
+			obj.readAsDataURL(files[0]);
+			obj.onload=function(){
+				var img="<img src='"+this.result+"' style='width:50px;height:50px;'/>";
+				$(d).append(img);
+				//插入图片数据到表单用于上传
+				var te =  '<textarea name="img[]">'+this.result+'</textarea>';
+				$("form").append(te);
+			}
+		}
+	</script>
+</body>
+</html>

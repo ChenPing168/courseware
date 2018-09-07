@@ -1,0 +1,14 @@
+body{
+	background: yellow;
+}
+@media only screen and (max-width: 300px) and (min-width:200px){
+	body{
+		background: green;
+	}
+}
+@media only screen and (max-width: 200px) {
+	body{
+		background: red;
+	}
+}
+

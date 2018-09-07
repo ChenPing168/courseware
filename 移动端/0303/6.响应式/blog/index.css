@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.container-fluid {
+  width: 100%;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.nav-wrap {
+  height: 50px;
+  background: black;
+}
+@media only screen and (max-width: 600px) {
+  .nav-wrap .nav-box {
+    display: none;
+  }
+}
+.nav-wrap .nav-box li {
+  float: left;
+  line-height: 50px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.nav-wrap .nav-box li a {
+  color: white;
+}
+.nav-wrap .nav-box li a:hover {
+  color: red;
+}
+.nav-wrap p {
+  background: green;
+  color: white;
+  line-height: 50px;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .nav-wrap p {
+    display: block;
+  }
+}
+.left {
+  width: 66%;
+  height: 500px;
+  box-sizing: border-box;
+  background: red;
+}
+@media only screen and (max-width: 600px) {
+  .left {
+    width: 100%;
+  }
+}
+.right {
+  width: 33%;
+  height: 500px;
+  box-sizing: border-box;
+  background: blue;
+}
+@media only screen and (max-width: 600px) {
+  .right {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

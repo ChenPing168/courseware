@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+#canvas {
+  border: 1px solid gainsboro;
+}
+#welcome {
+  width: 600px;
+  height: 400px;
+  background: darkcyan;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#welcome .center-white {
+  color: white;
+  text-align: center;
+}
+#welcome h2 {
+  color: white;
+  text-align: center;
+  margin-top: 90px;
+}
+#welcome p {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+#welcome a {
+  color: white;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+#welcome a:hover {
+  color: coral;
+}
+/*# sourceMappingURL=index.css.map */

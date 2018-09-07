@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ddd;
+}
+li{
+    list-style: none;
+}
+ @color:#ADD8E6;
+ .border-style(@px:1px){
+     border: @px solid @color;
+ }
+.menu{
+   
+    li{
+        float: left;
+        margin-left: 5px;
+        padding: 10px;
+        .border-style;
+        a{
+            color: white;
+            text-decoration: none;
+            .border-style;
+            &:hover{
+                color: yellow;
+            }
+        }
+    }
+}
+.article{
+   li{
+       .border-style(5px);
+    }
+}
+
+
+
+
+
+
+

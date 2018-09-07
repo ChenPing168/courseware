@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app>
+		<ul>
+			<li>
+				商品：ip6s
+				<br />
+				价格：<input type="text" id="" ng-model="price1" ng-init="price1=0"/>
+				<br />
+				数量：<input type="text" id="" ng-model="num1"  ng-init="num1=0"/>
+			</li>
+		</ul>
+		<p>总价：<span style="color: red;">{{price1 * num1}}</span></p>
+	</body>
+</html>

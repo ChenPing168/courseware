@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+	</head>
+	<body>
+		<!--只要$_SESSION里面有name就算登陆-->
+		<?php if(isset($_SESSION['name'])): ?>
+			欢迎 <span style="color: red;"><?php echo $_SESSION['name'] ?></span> 回来！ <a href="index.php?c=Member&a=out">退出</a>
+		<?php else: ?>
+			<a href="index.php?c=Member&a=login">登陆</a>
+			<a href="index.php?c=Member&a=reg">注册</a>
+		<?php endif ?>
+	</body>
+</html>
+
+
+
+
+
+

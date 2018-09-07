@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+		<style type="text/css">
+			.box{
+				width: 500px;
+				margin: 20px auto;
+			}
+		</style>
+		<script src="./jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//表单的提交事件
+				$('form').submit(function(){
+					//抓取form表单的所有内容，不用挨个抓取
+					var formData = $(this).serialize();
+					//发送异步
+					$.ajax({
+						type:"post",
+						url:"index.php?c=Arc&a=add",
+						data:formData,
+						dataType:'json',
+						success:function(phpData){
+							var str = '<tr class="msg-tr"><td>'+phpData.nickname+'</td><td>'+phpData.content+'</td><td>操作</td></tr>';
+							//选中最后一条留言，插入到后面
+							$('.msg-tr:last').after(str);
+						}
+					});
+					//阻止表单提交
+					return false;
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+		<table class="table table-hover">
+			<tr class="msg-tr">
+				<td>昵称</td>
+				<td>内容</td>
+				<td>操作</td>
+			</tr>
+			<?php foreach($data as $v): ?>
+				<tr class="msg-tr">
+					<td><?php echo $v['nickname'] ?></td>
+					<td><?php echo $v['content'] ?></td>
+					<td>操作</td>
+				</tr>
+			<?php endforeach ?>
+		</table>
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">昵称</label>
+				<input type="text" class="form-control" name="nickname" placeholder="">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">内容</label>
+				<textarea class="form-control" rows="3" name="content"></textarea>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		</div>
+	</body>
+
+</html>

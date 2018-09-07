@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="hd">
+		<div ng-controller="ctrl">
+			<span>{{msg}}</span>
+		</div>
+		<script type="text/javascript">
+			angular.module('hd',[]).controller('ctrl',function($scope){
+				$scope.msg = '请稍候...';
+				setTimeout(function(){
+					$scope.msg = '加载完毕！';
+					$scope.$apply();
+				},2000);
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

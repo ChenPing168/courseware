@@ -1,0 +1,69 @@
+[ 2015-12-31T08:47:41+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Index/Common/header.php.php
+[ 2015-12-31T08:47:51+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Index/../Common/header.php.php
+[ 2015-12-31T08:47:53+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Index/../Common/header.php.php
+[ 2015-12-31T08:48:00+08:00 ]NOTICE: Undefined variable: topCate/www/c58_teacher/blog/blog/Storage/view/compile/fe4be9671d2204af17e713118acb7dc2.php (40).
+[ 2015-12-31T08:48:00+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/fe4be9671d2204af17e713118acb7dc2.php (40).
+[ 2015-12-31T08:48:19+08:00 ]NOTICE: Undefined variable: topCate/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (40).
+[ 2015-12-31T08:48:19+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (40).
+[ 2015-12-31T08:48:20+08:00 ]NOTICE: Undefined variable: topCate/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (40).
+[ 2015-12-31T08:48:20+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (40).
+[ 2015-12-31T09:13:00+08:00 ]EXCEPTION: SELECT  count(*) AS c  FROM article_tag WHERE tag_tid=31 AND is_recycle=0 LIMIT 1 ;BindParams:array (
+)42S22;1054;Unknown column 'is_recycle' in 'where clause'
+[ 2015-12-31T09:38:48+08:00 ]EXCEPTION: 模板不存在:App/Home/View/List/App/Home/View/right.php.php
+[ 2015-12-31T09:42:56+08:00 ]NOTICE: Undefined variable: arcData/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (47).
+[ 2015-12-31T09:42:56+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (77).
+[ 2015-12-31T09:43:17+08:00 ]NOTICE: Undefined variable: arcData/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (47).
+[ 2015-12-31T09:43:17+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (77).
+[ 2015-12-31T09:43:19+08:00 ]NOTICE: Undefined variable: arcData/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (47).
+[ 2015-12-31T09:43:20+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (77).
+[ 2015-12-31T09:46:18+08:00 ]NOTICE: Undefined variable: arcData/www/c58_teacher/blog/blog/App/Home/Controller/ListController.php (49).
+[ 2015-12-31T09:46:18+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (77).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:31+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:54+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:46:59+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:47:42+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:47:42+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:47:58+08:00 ]NOTICE: Undefined index: tag/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:47:58+08:00 ]NOTICE: Invalid argument supplied for foreach()/www/c58_teacher/blog/blog/Storage/view/compile/9c5abaaa6f02cf73c9209d43230d6294.php (107).
+[ 2015-12-31T09:50:05+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T09:50:11+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T09:50:25+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T09:50:56+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T09:57:23+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T10:00:40+08:00 ]NOTICE: Undefined index: cid/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (44).
+[ 2015-12-31T10:00:40+08:00 ]NOTICE: Undefined index: cid/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (44).
+[ 2015-12-31T10:01:36+08:00 ]NOTICE: Undefined index: cid/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (43).
+[ 2015-12-31T10:03:19+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T10:03:55+08:00 ]NOTICE: Use of undefined constant Index - assumed 'Index'/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (42).
+[ 2015-12-31T10:04:18+08:00 ]NOTICE: Use of undefined constant Index - assumed 'Index'/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (42).
+[ 2015-12-31T10:27:15+08:00 ]EXCEPTION: 模板不存在:App/Home/View/Content/index.php
+[ 2015-12-31T10:41:26+08:00 ]NOTICE: Illegal string offset 'aid'/www/c58_teacher/blog/blog/App/Home/Controller/ContentController.php (13).
+[ 2015-12-31T10:41:26+08:00 ]NOTICE: Illegal string offset 'tag'/www/c58_teacher/blog/blog/App/Home/Controller/ContentController.php (13).
+[ 2015-12-31T10:41:26+08:00 ]NOTICE: Array to string conversion/www/c58_teacher/blog/blog/App/Home/Controller/ContentController.php (13).
+[ 2015-12-31T10:41:26+08:00 ]NOTICE: Illegal string offset 'aid'/www/c58_teacher/blog/blog/App/Home/Controller/ContentController.php (13).
+[ 2015-12-31T10:41:26+08:00 ]EXCEPTION: SELECT  tid,tname  FROM article_tag INNER JOIN tag ON tag_tid = tid WHERE article_aid=� ;BindParams:array (
+)42000;1064;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ 2015-12-31T10:42:19+08:00 ]NOTICE: Undefined variable: k/www/c58_teacher/blog/blog/App/Home/Controller/ContentController.php (12).
+[ 2015-12-31T12:08:25+08:00 ]NOTICE: Undefined index: aid/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (48).
+[ 2015-12-31T12:08:25+08:00 ]NOTICE: Undefined index: aid/www/c58_teacher/blog/blog/Storage/view/compile/2423d97aa5ac687e891a5fe801f81b73.php (48).

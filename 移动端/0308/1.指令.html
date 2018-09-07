@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+<div ng-app="hd">
+	<input type="radio" ng-model="userType" name="user" value="1"> 企业
+	<input type="radio" ng-model="userType" name="user" value="2" ng-checked="true"> 个人
+	<div ng-switch on="userType">
+		<div ng-switch-default>用户名 <input type="text"></div>
+		<div ng-switch-when="1">企业名称 <input type="text"></div>
+	</div>
+</div>
+<script>
+	var m = angular.module('hd', []);
+</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

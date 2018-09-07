@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="200" height="200"></canvas>
+		<img src="" id="img"/>
+<script type="text/javascript">
+//图像
+var img = new Image;
+img.src = './1.png';
+img.onload = function(){
+var ele = document.getElementById("canvas");
+//画到画布上面
+var ctx = ele.getContext('2d');
+ctx.drawImage(img,0,0,50,50);				
+var data = ele.toDataURL('image/png');
+document.getElementById("img").src = data;
+
+}
+</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

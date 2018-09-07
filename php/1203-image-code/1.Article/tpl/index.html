@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>文章列表</title>
+<link href="./tpl/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="./tpl/css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="listBox">
+	<ul>
+		<?php foreach($data as $k => $v): ?>
+			<li>
+				<a class='link' href="index.php?a=show&id=<?php echo $k ?>"><?php echo $v['title'] ?> </a>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+	            <a href="./index.php?a=edit&id=<?php echo $k ?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="javascript:if(confirm('确认删除吗？')) location.href='index.php?a=del&id=<?php echo $k ?>';">删除</a>
+			</li>
+		<?php endforeach ?>
+	</ul>
+</div>	
+
+ <!--<div class="listBox">
+	<ul>
+		<li><a class='link' href="">不好意思哦，还没有内容，等着你来添加哦！</a></li>
+	</ul>
+</div>	 -->
+
+<div class="pagination pagination-centered">
+    <ul class="page">
+        <li ><a href="index.php?a=add">添加文章</a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

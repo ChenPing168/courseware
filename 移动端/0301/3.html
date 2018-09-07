@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var ctx = document.getElementById("canvas").getContext('2d');
+			//保存一个干净的状态
+			ctx.save();
+			//第一条线
+			ctx.beginPath();
+			ctx.strokeStyle = '#008000';
+			ctx.lineWidth = 3;
+			ctx.moveTo(0,250);
+			ctx.lineTo(500,250);
+			ctx.stroke();
+			//回复到之前保存的状态
+			ctx.restore();
+			
+			//第二条线
+			ctx.beginPath();
+			ctx.moveTo(250,0);
+			ctx.lineTo(250,500);
+			ctx.stroke();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

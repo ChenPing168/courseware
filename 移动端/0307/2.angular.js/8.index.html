@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="hd">
+		<div ng-controller="ctrl">
+			<input type="password" name="pwd" id="" ng-model="pwd" />
+			<span style="color: red;">{{msg}}</span>
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('hd',[]);
+			m.controller('ctrl',function($scope){
+				$scope.$watch('pwd',function($newV,$oldV){
+					switch (true){
+						case $newV.length>10:
+							$scope.msg = '强！';
+							break;
+						case $newV.length>5:
+							$scope.msg = '中！';
+							break;
+						default:
+							$scope.msg = '弱！';
+							break;
+					}
+				})
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

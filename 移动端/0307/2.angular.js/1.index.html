@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="hd">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-controller="article">
+			{{title}}
+			{{5 * 5}}
+		</div>
+		<script type="text/javascript">
+			var m = angular.module('hd',[]);
+			m.controller('article',function($scope){
+				$scope.title = '后盾网';
+			})
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

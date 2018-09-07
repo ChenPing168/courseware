@@ -1,0 +1,2 @@
+[ 2016-02-01T15:26:05+08:00 ]NOTICE: A session had already been started - ignoring session_start()D:\freehost\hdeeds1\web\qqproject\Hdphp\Session\File.php (17).
+[ 2016-02-01T15:56:55+08:00 ]NOTICE: Undefined index: uidD:\freehost\hdeeds1\web\qqproject\App\Home\Controller\IndexController.php (31).

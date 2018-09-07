@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@color:#F06060;
+body{
+    background: @color;
+    position: relative;
+}
+html{
+    font-size: 10px;
+    //iphone4和iphone5的分辨率
+    @media screen and (max-width:320px){
+        font-size: 7.5px;
+    }
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    background: #FCAD26;
+    color: white;
+    padding: 2rem 10rem;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0 .6rem 0 darkorange;
+}
+#over{
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    background: @color;
+    display: none;
+    h1{
+        width: 100%;
+        text-align: center;
+        margin-top: 20rem;
+        font-size: 4rem;
+    }
+    .buttonwrap{
+        margin-top: 10rem;
+        text-align: center;
+         button{
+            .btn;
+        }
+    }
+   
+}
+#welcome{
+    color: white;
+    width: 100%;
+    background: @color;
+    position: absolute;
+    z-index: 10;
+    h1{
+        font-size:3rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 10rem;
+    }
+    p{
+        opacity: 0.8;
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 8rem;
+    }
+    
+    .btnwrap{
+        width: 100%;
+        margin-top: 20rem;
+        text-align: center;
+        button{
+            .btn;
+        }
+    }
+}
+#content{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    #scorewrap{
+        position: absolute;
+        left: 1.8rem;
+        top: 1.8rem;
+        font-size: 1.8rem;
+        opacity: 0.8;
+    }
+    #time{
+        font-size: 1.8rem;
+        position: absolute;
+        right: 1.8rem;
+        top: 1.8rem;
+        opacity: 0.8;
+    }
+    #box{
+        position: absolute;
+        top: 15rem;
+        width: 100%;
+        box-sizing: border-box;
+        background: #ddd;
+        border-radius: 1rem;
+        border: 1rem solid #ddd;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('[name=category]').change(function(){
+			//通过选择分类获得tid,然后发异步到数据，查询tid所对应的类型属性，js组合字符串，插入到页面
+			var tid = $('option:selected').attr('tid');
+			alert(tid);
+			$.ajax({
+
+			})
+		})
+	})
+	</script>
+
+</head>
+<body>
+<select name="category" id="">
+	<option value="1" tid="20">上衣</option>
+	<option value="2" tid="21">裙子</option>
+	<option value="3" tid="22">秋裤</option>
+</select>
+</body>
+</html>
+
+
+
+
+
+
+
+

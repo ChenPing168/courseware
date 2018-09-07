@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<body>
+<p ng-app="hd" ng-controller="ctrl">
+	{{user|encryptTel}}
+</p>
+<script type="text/javascript">
+	var app = angular.module('hd',[]);
+	app.filter('encryptTel',function(){
+		return function(userdata){
+			//k和v是反着的
+			angular.forEach(userdata,function(v,k){
+				userdata[k].tel = v.tel.substr(0,8) + '***';
+			})
+			return userdata;
+		}
+	})
+	app.controller('ctrl',function($scope){
+		$scope.user = [
+			//注意电话加''否则sbustr不能使用
+			{name:'马震宇',tel:'18612694053'},
+			{name:'向军',tel:'18600276067'}
+		];
+	})
+</script>
+
+
+
+
+
+
+</html>
